@@ -246,7 +246,7 @@ class Sprite(object):
                 self.curr_x = int(x)
             self.movements += 1
         for i in range(0, len(self.strlist)):
-            self.parent.addstr(self.curr_y+i, self.curr_x, self.strlist[i].encode('utf-8'))
+            self.parent.addstr(int(self.curr_y)+i, int(self.curr_x), self.strlist[i].encode('utf-8'))
         for i in range(0, len(self.callbacks)):
             self.callbacks[i]()
 
